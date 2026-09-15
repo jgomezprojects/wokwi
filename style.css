@@ -1,36 +1,97 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0f172a; /* Fondo oscuro moderno */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.tarjeta-control {
+    background-color: #1e293b;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    width: 480px; /* Más ancha para que los 5 botones se vean bien */
+    border: 1px solid #334155;
+}
+
+.badge-grupo {
+    background-color: #0ea5e9; /* Color Cyan Neón */
+    color: #fff;
+    font-weight: 800;
+    padding: 5px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.5);
+}
+
+#estado {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.conectado { color: #22c55e; }
+.desconectado { color: #ef4444; }
+
+.panel-display {
+    background-color: #0f172a;
+    border: 2px solid #334155;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+}
+
+#display_num {
+    font-size: 70px;
+    margin: 0;
+    color: #0ea5e9;
+    text-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
+}
+
+#display_bin, #label_origen {
+    font-size: 13px;
+    color: #94a3b8;
+    margin: 5px 0;
+}
+
 .cuadricula-botones {
     display: grid;
-    /* Cambiamos la organización a 5 columnas y 2 filas */
-    grid-template-columns: repeat(5, 1fr);
-    gap: 8px;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas iguales */
+    gap: 12px;
     justify-content: center;
 }
 
-/* Borramos la regla antigua que centraba el 0, ahora todos se acomodan solos */
-
 button {
-    /* Estilo diferenciador: Botones transparentes tipo Neón */
     background-color: transparent;
-    color: #00ffcc;
-    border: 2px solid #00ffcc;
-    border-radius: 8px; /* Rectangulares con bordes suaves */
+    color: #0ea5e9;
+    border: 2px solid #0ea5e9;
+    border-radius: 10px;
     width: 100%;
-    height: 45px; 
-    font-size: 18px;
+    height: 50px;
+    font-size: 20px;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.2s;
-    box-shadow: 0 0 5px rgba(0, 255, 204, 0.2);
+    transition: all 0.2s ease;
+    box-shadow: 0 0 8px rgba(14, 165, 233, 0.1);
 }
 
-button:hover { 
-    background-color: rgba(0, 255, 204, 0.1); 
-    transform: translateY(-2px);
-    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+button:hover {
+    background-color: rgba(14, 165, 233, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(14, 165, 233, 0.3);
 }
 
-button:active { 
-    transform: scale(0.9); 
-    background-color: #00ffcc; 
-    color: #000;
+button:active {
+    transform: scale(0.9);
+    background-color: #0ea5e9;
+    color: #0f172a;
 }
