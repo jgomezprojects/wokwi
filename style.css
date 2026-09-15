@@ -1,0 +1,104 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Fondo más moderno */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Esto evita que salga la barra de desplazamiento lateral */
+}
+
+.tarjeta-control {
+    background-color: #1a1a1a;
+    padding: 20px 25px; /* Reducido para ahorrar espacio vertical */
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    text-align: center;
+    width: 290px;
+    border: 1px solid #333;
+}
+
+.badge-grupo {
+    background-color: #00ffcc;
+    color: #000;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 15px;
+    display: inline-block;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.4);
+}
+
+#estado {
+    font-weight: bold;
+    font-size: 13px;
+    margin: 5px 0 10px 0;
+}
+
+.conectado { color: #4CAF50; text-shadow: 0 0 5px rgba(76, 175, 80, 0.5); }
+.desconectado { color: #f44336; }
+
+.panel-display {
+    background-color: #0a0a0a;
+    border: 2px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.8);
+}
+
+#display_num {
+    font-size: 60px; /* Tamaño optimizado para no empujar los botones hacia abajo */
+    margin: 0;
+    color: #00ffcc;
+    text-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+}
+
+#display_bin, #label_origen {
+    font-size: 12px;
+    color: #888;
+    margin: 4px 0;
+}
+
+.cuadricula-botones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* Menos espacio entre botones */
+    justify-content: center;
+}
+
+/* Botón 0 centrado en la última fila */
+.cuadricula-botones button:first-child {
+    grid-column: 2;
+    grid-row: 4;
+}
+
+button {
+    background: linear-gradient(145deg, #2a2a2a, #333333);
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 14px; /* Botones cuadrados redondeados */
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+button:hover { 
+    background: #444; 
+    transform: translateY(-2px);
+}
+
+button:active { 
+    transform: scale(0.92); 
+    background-color: #00ffcc; 
+    color: #000;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.6);
+}

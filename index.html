@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Grupo 782</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js"></script>
+</head>
+<body>
+    <div class="tarjeta-control">
+        <div class="badge-grupo">GRUPO 782</div>
+        <p id="estado" class="desconectado">🔴 Desconectado</p>
+        
+        <div class="panel-display">
+            <h2 id="display_num">-</h2>
+            <p id="display_bin">Bits DIP: [ ---- ]</p>
+            <p id="label_origen">Origen: Esperando conexión...</p>
+        </div>
+
+        <div id="teclado" class="cuadricula-botones">
+            <!-- Los botones se generan desde JS -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
